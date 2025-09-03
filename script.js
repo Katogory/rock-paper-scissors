@@ -1,10 +1,10 @@
 function getComputerChoice(){
-    let computerChoice = Math.random() * 100
-    
-    if (computerChoice > 66.67){
+    let computerChoice = Math.floor(Math.random() * 100);
+
+    if (computerChoice >= 67){
         return "Rock";
         
-     } else if (computerChoice > 33.33){
+     } else if (computerChoice >= 34){
         return "Paper";
         }
 
@@ -13,5 +13,4 @@ function getComputerChoice(){
         }
     };
 
-    
-    console.log(getComputerChoice());
+console.log(getComputerChoice());
