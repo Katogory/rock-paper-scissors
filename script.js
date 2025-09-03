@@ -17,9 +17,12 @@ console.log(getComputerChoice());
 
 function getHumanChoice() {
     let humanChoice = prompt("Rock, Paper, or Scissors?");
+    while (humanChoice !== "rock" && humanChoice !== "paper" && humanChoice !== "scissors"){
+        humanChoice = prompt("Please choose Rock Paper or Scissors");
+    }
     let humanChoiceLower = humanChoice.toLowerCase();
     return humanChoiceLower;
-}
+    }
 
 let humanScore = 0;
 let computerScore = 0;
