@@ -36,7 +36,14 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    let roundAmount = parseInt(prompt("How many rounds?"), 10);
+    let roundAmount = parseInt(prompt("Amount of rounds?"), 10);
+        
+     while (Number.isInteger(roundAmount) === false) {
+        roundAmount = parseInt(prompt("Please input the number of rounds!"));
+    }
+
+    console.log(Number.isInteger(roundAmount));
+
     let humanScore = 0;
     let computerScore = 0;
     for (let i = 0; i < roundAmount; i++) {
@@ -65,4 +72,4 @@ function playGame() {
     }
 }
 
-playGame(5);
+playGame();
